@@ -1,0 +1,42 @@
+/* Meta Infos
+###########################################################################  */
+
+.info-list{
+  padding-top: var(--l);
+  padding-bottom: var(--xl);
+}
+
+.info-list:after{
+  content:'.';
+  display: none;
+  clear: both;
+}
+
+.info-list dt{
+  font-weight: var(--fw-bold);
+  float: left;
+  margin-right: var(--xxs);
+}
+
+.info-list dt:after{
+  content: ':';
+}
+
+/* Intro Text
+###########################################################################  */
+
+.intro-text{
+  font-size: var(--l);
+  padding: var(--m);
+  width: 100%;
+  max-width: calc(var(--l) * 40);
+  line-height: var(--lh-normal);
+}
+
+
+/* Additional Infos
+###########################################################################  */
+
+.additional-infos{
+  display: none;
+}
