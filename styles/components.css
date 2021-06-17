@@ -1,31 +1,31 @@
 /* Meta Infos
 ###########################################################################  */
 
-.info-list{
+.info-list {
   padding-top: var(--l);
   padding-bottom: var(--xl);
 }
 
-.info-list:after{
-  content:'.';
+.info-list::after {
+  content: '.';
   display: none;
   clear: both;
 }
 
-.info-list dt{
+.info-list dt {
   font-weight: var(--fw-bold);
   float: left;
   margin-right: var(--xxs);
 }
 
-.info-list dt:after{
+.info-list dt::after {
   content: ':';
 }
 
 /* Intro Text
 ###########################################################################  */
 
-.intro-text{
+.intro-text {
   font-size: var(--l);
   padding: var(--m);
   width: 100%;
@@ -37,6 +37,9 @@
 /* Additional Infos
 ###########################################################################  */
 
-.additional-infos{
+.additional-infos {
+  padding: 0 var(--s);
   display: none;
+  opacity: 0;
+  transition: opacity 2s linear;
 }

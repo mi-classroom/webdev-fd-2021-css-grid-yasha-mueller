@@ -1,32 +1,47 @@
 /* Content Wrap
 ###########################################################################  */
 
-.content-wrap{
+.overview {
   width: 100vw;
-  height: 100vh;
-  background-color: var(--light);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* height: auto; */
+  padding: 40px;
+  background-color: var(--light);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 40px;
 }
 
 .content-wrap:nth-child(even) {
   background-color: var(--lighter);
 }
 
-
 /* Card
 ###########################################################################  */
 
-.card{
-  width: clamp(300px, 50%, 800px);
+.card {
+  padding-bottom: 20px;
   background-color: var(--lightest);
+  height: 60vh;
   border-radius: var(--radius-m);
   overflow: hidden;
   box-shadow: var(--n-shadow-l);
 }
 
-.card figcaption{
-  padding: var(--l) var(--m) var(--xl) var(--m);
+.card:hover {
+  height: auto;
+  width: 512px;
+}
+
+.card:hover > .additional-infos {
+  display: block;
+  opacity: 1;
+}
+
+.card:hover img {
+  height: 420px;
+}
+
+.card figcaption {
+  padding: var(--l) var(--m) var(--s) var(--m);
 }
