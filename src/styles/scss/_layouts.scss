@@ -1,0 +1,47 @@
+/* Content Wrap
+###########################################################################  */
+
+.overview {
+  display: grid;
+  width: 100vw;
+
+  /* height: auto; */
+  padding: 40px;
+  background-color: var(--light);
+  grid-gap: 40px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.content-wrap:nth-child(even) {
+  background-color: var(--lighter);
+}
+
+/* Card
+###########################################################################  */
+
+.card {
+  overflow: hidden;
+  height: 60vh;
+  padding-bottom: 20px;
+  background-color: var(--lightest);
+  border-radius: var(--radius-m);
+  box-shadow: var(--n-shadow-l);
+}
+
+.card:hover {
+  width: 512px;
+  height: auto;
+}
+
+.card:hover > .additional-infos {
+  display: block;
+  opacity: 1;
+}
+
+.card:hover img {
+  height: 420px;
+}
+
+.card figcaption {
+  padding: var(--l) var(--m) var(--s) var(--m);
+}
