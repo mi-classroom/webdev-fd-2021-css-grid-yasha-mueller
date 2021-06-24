@@ -2,14 +2,14 @@
 ###########################################################################  */
 
 .overview {
+  display: grid;
   width: 100vw;
 
   /* height: auto; */
   padding: 40px;
   background-color: var(--light);
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
   grid-gap: 40px;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .content-wrap:nth-child(even) {
@@ -20,17 +20,17 @@
 ###########################################################################  */
 
 .card {
+  overflow: hidden;
+  height: 60vh;
   padding-bottom: 20px;
   background-color: var(--lightest);
-  height: 60vh;
   border-radius: var(--radius-m);
-  overflow: hidden;
   box-shadow: var(--n-shadow-l);
 }
 
 .card:hover {
-  height: auto;
   width: 512px;
+  height: auto;
 }
 
 .card:hover > .additional-infos {

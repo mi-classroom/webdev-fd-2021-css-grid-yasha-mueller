@@ -7,15 +7,15 @@
 }
 
 .info-list::after {
-  content: '.';
   display: none;
   clear: both;
+  content: '.';
 }
 
 .info-list dt {
-  font-weight: var(--fw-bold);
-  float: left;
   margin-right: var(--xxs);
+  float: left;
+  font-weight: var(--fw-bold);
 }
 
 .info-list dt::after {
@@ -26,10 +26,10 @@
 ###########################################################################  */
 
 .intro-text {
-  font-size: var(--l);
-  padding: var(--m);
   width: 100%;
   max-width: calc(var(--l) * 40);
+  padding: var(--m);
+  font-size: var(--l);
   line-height: var(--lh-normal);
 }
 
@@ -38,8 +38,8 @@
 ###########################################################################  */
 
 .additional-infos {
-  padding: 0 var(--s);
   display: none;
+  padding: 0 var(--s);
   opacity: 0;
   transition: opacity 2s linear;
 }

@@ -1,0 +1,303 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none; }
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth; }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto; }
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%; }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+@font-face {
+  font-family: IBMPlexSans;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Light.ttf") format("truetype"), url("../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Light.woff2") format("woff2"); }
+
+@font-face {
+  font-family: IBMPlexSans;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf") format("truetype"), url("../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.woff2") format("woff2"); }
+
+@font-face {
+  font-family: IBMPlexSans;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf") format("truetype"), url("../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Medium.woff2") format("woff2"); }
+
+@font-face {
+  font-family: IBMPlexSans;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf") format("truetype"), url("../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.woff2") format("woff2"); }
+
+@font-face {
+  font-family: MaterialIcons;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/MaterialIcons/MaterialIcons-Regular.eot");
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../assets/fonts/MaterialIcons/MaterialIcons-Regular.woff2") format("woff2"), url("../assets/fonts/MaterialIcons/MaterialIcons-Regular.woff") format("woff"), url("../assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf") format("truetype"); }
+
+:root {
+  --bfs: 0.5rem;
+  --xxs: calc(var(--bfs) * 1);
+  --xs: calc(var(--bfs) * 1.25);
+  --s: calc(var(--bfs) * 1.6);
+  --m: calc(var(--bfs) * 2);
+  --l: calc(var(--bfs) * 2.5);
+  --xl: calc(var(--bfs) * 3.15);
+  --xxl: calc(var(--bfs) * 4);
+  --xxxl: calc(var(--bfs) * 5);
+  --xxxxl: calc(var(--bfs) * 6.3);
+  --light: #ccc;
+  --lighter: #eee;
+  --lightest: #fff;
+  --dark: #888;
+  --darker: #111;
+  --darkest: #000;
+  --darken: rgba(0, 0, 0, 0.2);
+  --color-text: var(--darker);
+  --color-headline: var(--dark);
+  --color-accent: #f26d3d;
+  /* #CE4BF2 */
+  --color-decoration: #3264a6;
+  /* #3264A6 */
+  --ff-normal: 'IBM Plex Sans', sans-serif;
+  --ff-serif: 'IBM Plex Serif', serif;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --lh-normal: 140%;
+  --lh-tight: 110%;
+  --lh-loose: 150%;
+  --tr-fast: 0.3s;
+  --shadow-l: 0 0 10px rgba(0, 0, 0, 0.5);
+  --n-shadow-l:
+    20px 20px 60px rgba(0, 0, 0, 0.1),
+    -20px -20px 60px rgba(255, 255, 255, 0.1);
+  /* https://neumorphism.io/#e0e0e */
+  --border-width-s: 1px;
+  --border-width-m: 3px;
+  --radius-m: var(--m); }
+
+.icon {
+  height: auto;
+  width: auto;
+  font-family: var(--ff-icons);
+  vertical-align: middle;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  margin-right: var(--xs); }
+  .icon--s {
+    font-size: var(--s);
+    line-height: var(--s); }
+  .icon--m {
+    font-size: var(--m);
+    line-height: var(--m); }
+  .icon--l {
+    font-size: var(--l);
+    line-height: var(--l); }
+  .icon--xl {
+    font-size: var(--xl);
+    line-height: var(--xl); }
+  .icon.md-dark {
+    color: var(--lightest); }
+  .icon.md-light {
+    color: var(--darkest); }
+  .icon--inline {
+    margin-right: 0.4em;
+    font-size: var(--m); }
+  .icon:before {
+    content: attr(data-icon); }
+
+* {
+  /* TODO: Zeigen */
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background-color: var(--lightest);
+  color: var(--color-text);
+  font-family: var(--ff-normal);
+  font-size: var(--m);
+  font-weight: var(--fw-normal);
+  hyphens: auto;
+  line-height: var(--lh-normal); }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-headline);
+  font-weight: bold;
+  hyphens: none; }
+
+h1 {
+  padding-top: var(--xxxl);
+  padding-bottom: var(--xxxl);
+  padding-left: var(--m);
+  color: var(--dark);
+  font-size: var(--xxxl);
+  line-height: var(--lh-tight); }
+
+h2 {
+  padding-top: var(--m);
+  padding-left: var(--s);
+  margin-bottom: var(--xxl);
+  color: var(--color-accent);
+  font-size: var(--xxl);
+  line-height: var(--lh-tight); }
+
+h3 {
+  padding-top: var(--xl);
+  margin-bottom: var(--xl);
+  font-size: var(--xl);
+  font-weight: normal; }
+
+img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center; }
+
+blockquote {
+  padding: 0 var(--s); }
+
+/* Meta Infos
+###########################################################################  */
+.info-list {
+  padding-top: var(--l);
+  padding-bottom: var(--xl); }
+
+.info-list::after {
+  display: none;
+  clear: both;
+  content: '.'; }
+
+.info-list dt {
+  margin-right: var(--xxs);
+  float: left;
+  font-weight: var(--fw-bold); }
+
+.info-list dt::after {
+  content: ':'; }
+
+/* Intro Text
+###########################################################################  */
+.intro-text {
+  width: 100%;
+  max-width: calc(var(--l) * 40);
+  padding: var(--m);
+  font-size: var(--l);
+  line-height: var(--lh-normal); }
+
+/* Additional Infos
+###########################################################################  */
+.additional-infos {
+  display: none;
+  padding: 0 var(--s);
+  opacity: 0;
+  transition: opacity 2s linear; }
+
+/* Content Wrap
+###########################################################################  */
+.overview {
+  display: grid;
+  width: 100vw;
+  /* height: auto; */
+  padding: 40px;
+  background-color: var(--light);
+  grid-gap: 40px;
+  grid-template-columns: repeat(5, 1fr); }
+
+.content-wrap:nth-child(even) {
+  background-color: var(--lighter); }
+
+/* Card
+###########################################################################  */
+.card {
+  overflow: hidden;
+  height: 60vh;
+  padding-bottom: 20px;
+  background-color: var(--lightest);
+  border-radius: var(--radius-m);
+  box-shadow: var(--n-shadow-l); }
+
+.card:hover {
+  width: 512px;
+  height: auto; }
+
+.card:hover > .additional-infos {
+  display: block;
+  opacity: 1; }
+
+.card:hover img {
+  height: 420px; }
+
+.card figcaption {
+  padding: var(--l) var(--m) var(--s) var(--m); }
+
+/*# sourceMappingURL=main.css.map */
